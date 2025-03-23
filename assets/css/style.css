@@ -24,6 +24,7 @@
 
 body {
   overflow-y: overlay;
+  max-width: 100%;
   overflow-x: hidden;
   margin: 0;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -270,14 +271,14 @@ main p {
 
 .rScroll {
   animation: transform ease-in forwards;
-  animation-timeline: view(80vh 5vh);
+  animation-timeline: view(100vh 5vh);
   transform: translateX(50vw);
   opacity: 0.5;
 }
 
 .lScroll {
   animation: transform ease-in forwards;
-  animation-timeline: view(80vh 5vh);
+  animation-timeline: view(100vh 5vh);
   transform: translateX(-50vw);
   opacity: 0.5;
 }
