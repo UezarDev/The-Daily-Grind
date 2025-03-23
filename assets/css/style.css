@@ -44,7 +44,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:window-inactive {
-    background: none;
+  background: none;
 }
 
 header {
@@ -80,20 +80,6 @@ header {
 .hf3 {
   display: flex;
   align-items: center;
-}
-
-/* Layout for larger screens */
-@media (min-aspect-ratio: 1/1) {
-  .hc {
-    flex-direction: column;
-  }
-
-  .hf1,
-  .hf2,
-  .hf3 {
-    flex: 1 1 50%;
-  }
-  
 }
 
 /*Header Item*/
@@ -175,7 +161,8 @@ header {
   filter: drop-shadow(0 1vw 1vw rgba(0, 0, 0, 0.5));
   transform: translate(-4vmin, -1vw);
 }
-.cup:hover ~ .vapor {
+
+.cup:hover~.vapor {
   transform: translate(-50%, -85%);
 }
 
@@ -220,8 +207,8 @@ nav ul li a {
 .offer {
   margin: 0;
   padding: 0;
-  height: 20vh;
-  line-height: 20vh;
+  height: 20vw;
+  line-height: 20vw;
   padding: 0;
   background-image: url(../imgs/CoffeeHand.jpg);
   background-position: center;
@@ -232,6 +219,7 @@ nav ul li a {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   flex-wrap: nowrap;
   height: 100%;
 }
@@ -260,11 +248,11 @@ nav ul li a {
 }
 
 main>.flexC {
-  height: 60vh;
+  height: 50vw;
 }
 
 main p {
-  font-size: 2vw;
+  font-size: 3vw;
   padding: 0 4vw;
   margin: 0;
 }
@@ -272,7 +260,7 @@ main p {
 .img {
   object-fit: scale-down;
   padding: 3vw;
-  max-height: 100%;
+  max-height: 33vw;
   filter: drop-shadow(0vw 0.5vw 0.5vw rgba(0, 0, 0, 0.25));
 }
 
@@ -368,4 +356,36 @@ footer h3 {
   transition-duration: 150ms;
   box-shadow: 0vw 0.2vmax 0.5vmax 0 rgba(0, 0, 0, 0.5) inset;
   transform: scale(1);
+}
+
+/* Layout for larger screens */
+@media (min-aspect-ratio: 1/1) {
+  .hc {
+    flex-direction: column;
+  }
+
+  .hf1,
+  .hf2,
+  .hf3 {
+    flex: 1 1 50%;
+  }
+
+  .img {
+    max-height: 100%;
+  }
+
+  main>.flexC {
+    height: 33vw;
+  }
+
+  main p {
+    font-size: 2vw;
+    padding: 0 4vw;
+    margin: 0;
+  }
+
+  .offer {
+    height: 18vh;
+    line-height: 18vh;
+  }
 }
